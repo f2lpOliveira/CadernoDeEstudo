@@ -84,7 +84,17 @@
           const botaoDeleta = document.createElement("button");
 
           botaoDeleta.innerText = "deletar";
-          botaoDeleta.addEventListener("click", () => console.log("deletado"));
+          botaoDeleta.addEventListener("click", deletarCadastro);
+          return botaoDeleta;
+        }
+
+        function deletarCadastro(evento) {
+          const botaoDeleta = evento.target;
+
+          const cadastroCompleto = botaoDeleta.parentElement;
+
+          cadastroCompleto.remove();
+
           return botaoDeleta;
         }
       })();
