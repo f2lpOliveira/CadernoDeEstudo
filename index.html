@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praticando DOM</title>
+    <style>
+      label {
+        display: block;
+      }
+      .mb {
+        margin-bottom: 2px;
+      }
+      div,
+      input,
+      button {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <div class="form-cadastro">
+        <h1 class="title">Cadastro</h1>
+        <form type="form" action="">
+          <label class="mb">Nome Completo</label>
+          <input
+            type="text"
+            class="mb"
+            placeholder="João de Deus"
+            data-form-input />
+          <button data-form-button>Enviar</button>
+        </form>
+        <ul class="list">
+          <li class="task">
+            <p class="content">Fellipe Freire de Oliveira</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      const novoCadastro = document.querySelector("[data-form-button]");
+      const valorInput = document.querySelector("[data-form-input]");
+      console.log(valorInput);
+      // console.log(novoCadastro);
+
+      novoCadastro.addEventListener("click", () => console.log("clicou!"));
+    </script>
+  </body>
+</html>
