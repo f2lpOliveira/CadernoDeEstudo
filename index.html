@@ -17,6 +17,9 @@
       button {
         display: inline-block;
       }
+      .done {
+        text-decoration: line-through;
+      }
     </style>
   </head>
   <body>
@@ -62,9 +65,19 @@
       const BotaoVerifica = () => {
         const botaoVerifica = document.createElement("button");
 
-        botaoVerifica.addEventListener("click", () => console.log("clicou!"));
+        botaoVerifica.classList.add("check-button");
+        botaoVerifica.innerText = "verificado";
+        botaoVerifica.addEventListener("click", verificarCadastro);
         return botaoVerifica;
       };
+
+      function verificarCadastro(evento) {
+        const botaoVerifica = evento.target; // Captura qual elemento foi clicado
+        const cadastroCompleto = botaoVerifica.parentElement;
+
+        cadastroCompleto.classList.toggle("done");
+        console.log(cadastroCompleto);
+      }
     </script>
   </body>
 </html>
