@@ -41,11 +41,14 @@
     </div>
     <script>
       const novoCadastro = document.querySelector("[data-form-button]");
-      const valorInput = document.querySelector("[data-form-input]");
-      console.log(valorInput);
-      // console.log(novoCadastro);
 
-      novoCadastro.addEventListener("click", () => console.log("clicou!"));
+      novoCadastro.addEventListener("click", evento => {
+        evento.preventDefault();
+        const input = document.querySelector("[data-form-input]");
+        const valor = input.value;
+        console.log(valor);
+        input.value = " ";
+      });
     </script>
   </body>
 </html>
