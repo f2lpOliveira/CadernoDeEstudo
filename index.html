@@ -50,6 +50,7 @@
 
         tarefa.innerHTML = conteudo;
 
+        tarefa.appendChild(BotaoVerifica());
         lista.appendChild(tarefa);
         input.value = " ";
       }
@@ -57,6 +58,13 @@
       const novoCadastro = document.querySelector("[data-form-button]");
 
       novoCadastro.addEventListener("click", criarCadastro);
+
+      const BotaoVerifica = () => {
+        const botaoVerifica = document.createElement("button");
+
+        botaoVerifica.addEventListener("click", () => console.log("clicou!"));
+        return botaoVerifica;
+      };
     </script>
   </body>
 </html>
