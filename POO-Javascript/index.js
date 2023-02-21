@@ -1,24 +1,31 @@
 class Cliente {
   nome;
   cpf;
+}
+
+class ContaCorrente {
   agencia;
   conta;
   saldo;
 }
 
 const cliente1 = new Cliente();
-const cliente2 = new Cliente();
-
 cliente1.nome = "Barney";
 cliente1.cpf = 11100011100;
-cliente1.agencia = 0001;
-cliente1.conta = 1100110;
-cliente1.saldo = 0;
 
+const cliente2 = new Cliente();
 cliente2.nome = "Lola";
 cliente2.cpf = 11111100011;
-cliente2.agencia = 0001;
-cliente2.conta = 1111001;
-cliente2.saldo = 0;
 
-console.log(cliente1, cliente2);
+const contaCorrenteBarney = new ContaCorrente();
+contaCorrenteBarney.saldo = 0;
+contaCorrenteBarney.agencia = 0001;
+contaCorrenteBarney.conta = 1100110;
+console.log(contaCorrenteBarney.saldo);
+contaCorrenteBarney.saldo = 100;
+console.log(contaCorrenteBarney.saldo);
+let valorSacado = 200;
+contaCorrenteBarney.saldo -= valorSacado;
+
+console.log(contaCorrenteBarney.saldo);
+console.log(cliente1);
