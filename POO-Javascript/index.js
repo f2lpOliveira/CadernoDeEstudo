@@ -27,9 +27,15 @@ const contaCorrenteBarney = new ContaCorrente();
 contaCorrenteBarney.saldo = 0;
 contaCorrenteBarney.agencia = 0001;
 contaCorrenteBarney.conta = 1100110;
+
+// Operação de Depósito da Conta Corrente
 console.log(contaCorrenteBarney.saldo);
-contaCorrenteBarney.saldo = 100;
+contaCorrenteBarney.saldo += 100;
+contaCorrenteBarney.saldo += 200;
+contaCorrenteBarney.saldo += -1;
 console.log(contaCorrenteBarney.saldo);
+
+// Operação de Saque da Conta Corrente
 contaCorrenteBarney.sacar(50);
 
 console.log(contaCorrenteBarney.saldo);
