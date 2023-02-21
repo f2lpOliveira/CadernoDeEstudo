@@ -25,7 +25,9 @@ console.log(contaCorrenteBarney.saldo);
 contaCorrenteBarney.saldo = 100;
 console.log(contaCorrenteBarney.saldo);
 let valorSacado = 200;
-contaCorrenteBarney.saldo -= valorSacado;
+if (contaCorrenteBarney.saldo >= valorSacado) {
+  contaCorrenteBarney.saldo -= valorSacado;
+}
 
 console.log(contaCorrenteBarney.saldo);
 console.log(cliente1);
