@@ -1,0 +1,12 @@
+{
+	"name": "peoplebank",
+	"version": "1.0.0",
+	"description": "Projeto do peoplebank para seus clientes",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Fellipe Oliveira",
+	"license": "ISC",
+	"type": "module"
+}
