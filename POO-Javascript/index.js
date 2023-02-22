@@ -6,16 +6,17 @@ class Cliente {
 class ContaCorrente {
   agencia;
   conta;
-  saldo;
+  // #saldo = 0; https://github.com/tc39/proposal-class-fields#private-fields
+  _saldo = 0;
 
   sacar(valor) {
-    if (this.saldo >= valor) {
-      this.saldo -= valor;
+    if (this._saldo >= valor) {
+      this._saldo -= valor;
     }
   }
   depositar(valor) {
     if (valor > 0) {
-      this.saldo += valor;
+      this._saldo += valor;
     }
   }
 }
@@ -29,19 +30,13 @@ cliente2.nome = "Lola";
 cliente2.cpf = 11111100011;
 
 const contaCorrenteBarney = new ContaCorrente();
-contaCorrenteBarney.saldo = 0;
 contaCorrenteBarney.agencia = 0001;
 contaCorrenteBarney.conta = 1100110;
 
 // Operação de Depósito da Conta Corrente
-console.log(contaCorrenteBarney.saldo);
 contaCorrenteBarney.depositar(100);
-contaCorrenteBarney.depositar(200);
-contaCorrenteBarney.depositar(-1);
-console.log(contaCorrenteBarney.saldo);
 
 // Operação de Saque da Conta Corrente
 contaCorrenteBarney.sacar(50);
 
-console.log(contaCorrenteBarney.saldo);
-console.log(cliente1);
+console.log(contaCorrenteBarney);
